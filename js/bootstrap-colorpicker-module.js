@@ -267,7 +267,7 @@ angular.module('colorpicker.module', [])
               thisFormat = attrs.colorpicker ? attrs.colorpicker : 'hex',
               position = angular.isDefined(attrs.colorpickerPosition) ? attrs.colorpickerPosition : 'bottom',
               fixedPosition = angular.isDefined(attrs.colorpickerFixedPosition) ? attrs.colorpickerFixedPosition : false,
-              target = angular.isDefined(attrs.colorpickerParent) ? elem.parent() : angular.element(document.body),
+              target = angular.isDefined(attrs.colorpickerParent) ? angular.element(document.body) : elem.parent(),
               withInput = angular.isDefined(attrs.colorpickerWithInput) ? attrs.colorpickerWithInput : false,
               inputTemplate = withInput ? '<input type="text" name="colorpicker-input">' : '',
               template =
@@ -447,8 +447,8 @@ angular.module('colorpicker.module', [])
               };
             } else if (position === 'bottom') {
               positionValue = {
-                'top': positionOffset.top + elem[0].offsetHeight + 2,
-                'left': positionOffset.left
+                'top': elem[0].offsetHeight + 2,
+                'left': 0
               };
             } else if (position === 'left') {
               positionValue = {

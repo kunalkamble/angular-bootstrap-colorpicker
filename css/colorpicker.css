@@ -167,3 +167,5 @@ colorpicker-preview {
   clear: both;
   background-position: 0 100%;
 }
+
+.color-palette-list li { position: relative; }
