@@ -437,13 +437,13 @@ angular.module('colorpicker.module', [])
 
             if (position === 'top') {
               positionValue =  {
-                'top': positionOffset.top - 147,
-                'left': positionOffset.left
+                'top':  - elem[0].offsetHeight - 120,
+                'left': 0
               };
             } else if (position === 'right') {
               positionValue = {
-                'top': positionOffset.top,
-                'left': positionOffset.left + 126
+                'top': 0,
+                'left': elem[0].offsetWidth + 4
               };
             } else if (position === 'bottom') {
               positionValue = {
@@ -452,8 +452,8 @@ angular.module('colorpicker.module', [])
               };
             } else if (position === 'left') {
               positionValue = {
-                'top': positionOffset.top,
-                'left': positionOffset.left - 150
+                'top': 0,
+                'left': - 136
               };
             }
             return {
